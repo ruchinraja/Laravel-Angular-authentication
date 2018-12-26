@@ -11,6 +11,7 @@ import { ResetRequestComponent } from './components/passwords/reset-request/rese
 import { ResponseRequestComponent } from './components/passwords/response-request/response-request.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TokenService } from './services/token.service';
+import { AuthService } from './services/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,7 @@ import { TokenService } from './services/token.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [TokenService],
+  providers: [TokenService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
